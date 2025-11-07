@@ -30,8 +30,9 @@ public class TestingSeleniumGridTest  {
     
     public RegistrationPageObject registrationPageObject;
 
-    @Parameters("browser")
+   
     @BeforeTest
+     @Parameters("browser")
     public void setUp(String browser) throws MalformedURLException{
         DesiredCapabilities desiredCapabilities= new DesiredCapabilities();
 
