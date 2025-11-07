@@ -1,26 +1,27 @@
 pipeline {
     agent any
 
+    tools {
+            maven "MAVEN_HOME"
+    }
+
     stages {
         stage('Build') {
             steps {
-                echo 'Build App'
+                
+                git 'https://github.com/Suraiyaabegum/EcommerceWebshop.git'
+                bat "mvn -Dmaven.test.failure.ignore=true clean package"
             }
-        }
-stage('Test') {
-            steps {
-                echo 'Test App'
+
+            post {
+                success {
+                    junit '**/target/surefire-reports/TEST-*.xml'
+                    archiveArtifacts 'target/*.jar'
+                }
+               
+
             }
-        }
-stage('Deploy') {
-            steps {
-                echo 'Deploy App'
-            }
-        }
-    }
-    post{
-        always{
-            emailext body: 'Summary', subject: 'Pipeline Status', to: 'suraiyabegum400@gmail.com'
         }
     }
 }
+
