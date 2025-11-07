@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-05-28T23:34:13 IST" name="Default suite" finished-at="2025-05-28T23:34:31 IST" duration-ms="18547">
+    <groups>
+    </groups>
+    <test started-at="2025-05-28T23:34:13 IST" name="Default test" finished-at="2025-05-28T23:34:31 IST" duration-ms="18547">
+      <class name="com.qa.testcases.TC1_FullFlow">
+        <test-method signature="fullFlow()[pri:0, instance:com.qa.testcases.TC1_FullFlow@5677323c]" started-at="2025-05-28T23:34:13 IST" name="fullFlow" finished-at="2025-05-28T23:34:31 IST" duration-ms="18506" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- fullFlow -->
+      </class> <!-- com.qa.testcases.TC1_FullFlow -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
